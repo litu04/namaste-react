@@ -15,9 +15,9 @@ const Header = () => {
     <div className="header">
         <Title/>  
         <ul className="nav-items">
-            <li>Home</li>
+            <Link to="/"><li>Home</li></Link>
             <Link to="/about"><li>About</li></Link>
-            <li>Contact</li>
+            <Link to="contact"><li>Contact</li></Link>
             <li>Cart</li>
         </ul>
         {isLoggedIn ? (<button onClick={() => setIsLoggedIn(!isLoggedIn)}>Log Out</button>) : (<button onClick={() => setIsLoggedIn(!isLoggedIn)}>Log In</button>)}
