@@ -1,21 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Link } from "react-router-dom"
+//logo will always be default imported
+import logo from "../assets/img/foodvilla.png"
 
 const Title = () => (
-    <a href="/">
-        <img className="logo" src="https://github.com/chetannada/Namaste-React/blob/main/Chapter%2004%20-%20Talk%20is%20Cheap,%20show%20me%20the%20code/Images/Food%20Fire%20Logo.png?raw=true" alt="Food Villa" />
-    </a>
+    <Link to="/">
+        <img className="logo" src={logo} alt="logo" />
+    </Link>
 )
 
 const Header = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
   return (
     <div className="header">
         <Title/>  
         <ul className="nav-items">
             <li>Home</li>
-            <li>About</li>
+            <Link to="/about"><li>About</li></Link>
             <li>Contact</li>
             <li>Cart</li>
         </ul>
+        {isLoggedIn ? (<button onClick={() => setIsLoggedIn(!isLoggedIn)}>Log Out</button>) : (<button onClick={() => setIsLoggedIn(!isLoggedIn)}>Log In</button>)}
     </div>
   )
 }

@@ -53,3 +53,17 @@ button.search-btn {
     border: none;
     cursor: pointer;
 }
+
+.err-container {
+    text-align: center;
+    color: grey;
+    margin: 20px 0;
+    font-size: large;
+}
+
+.shimmer-card {
+    width: 230px;
+    height: 280px;
+    background: lightgrey;
+    margin: 20px;
+}
