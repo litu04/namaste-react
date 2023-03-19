@@ -1,6 +1,6 @@
-import ProfileClass from "./ProfileClass"
+// import ProfileClass from "./ProfileClass"
 import React from "react"
-//import ProfileFunction from "./ProfileFunction"
+import ProfileFunction from "./ProfileFunction"
 // const About = () => {
 //     return(
 //         <>
@@ -21,7 +21,8 @@ class About extends React.Component{
         return(
             <>
                 <h2>About the Food App Page</h2>
-                <ProfileClass name={"first child"}/>
+                {/* <ProfileClass name={"first child"}/> */}
+                <ProfileFunction name={"Sahil"}/>
             </>
         )
     }
