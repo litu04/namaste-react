@@ -1,6 +1,7 @@
 // import ProfileClass from "./ProfileClass"
 import React from "react"
-import ProfileFunction from "./ProfileFunction"
+import { Outlet } from "react-router-dom"
+// import ProfileFunction from "./ProfileFunction"
 // const About = () => {
 //     return(
 //         <>
@@ -22,7 +23,8 @@ class About extends React.Component{
             <>
                 <h2>About the Food App Page</h2>
                 {/* <ProfileClass name={"first child"}/> */}
-                <ProfileFunction name={"Sahil"}/>
+                {/* <ProfileFunction name={"Sahil"}/> */}
+                <Outlet/>
             </>
         )
     }
