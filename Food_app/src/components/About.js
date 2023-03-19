@@ -14,13 +14,10 @@ import React from "react"
 class About extends React.Component{
     constructor(props){
         super(props)
-        console.log("parent constructor")
     }
     componentDidMount(){
-        console.log("parent component did mount called")
     }
     render(){
-        console.log("parent rendered")
         return(
             <>
                 <h2>About the Food App Page</h2>
