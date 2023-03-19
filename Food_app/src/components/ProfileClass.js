@@ -41,3 +41,23 @@ class ProfileClass extends React.Component{
 }
 
 export default ProfileClass
+
+/*
+    parent const
+    parent render
+        child const
+        child render
+
+    commit phase:
+    DOM update
+    API call (child cdm() is called)
+    parent cdm()
+
+        json data logged
+        child cdm() logged
+        child render
+        child cdu()
+
+    unmounting: 
+        child cwu()
+*/
