@@ -25,7 +25,6 @@ class About extends React.Component{
             <>
                 <h2>About the Food App Page</h2>
                 <ProfileClass name={"first child"}/>
-                <ProfileClass name={"second child"}/>
             </>
         )
     }
