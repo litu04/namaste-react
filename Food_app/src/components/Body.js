@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { swiggy_api_URL } from "../constant"
 import RestaurantCard from "./RestaurantCard"
 import Shimmer from './Shimmer'
@@ -52,7 +53,7 @@ const Body = () => {
       {errMsg && <div className="err-container">{errMsg}</div>}
       {allRestaurants.length === 0 ? (<Shimmer/>) : (
         <div className="restaurant-list">
-          {filterRestaurants?.map((restaurant) => <RestaurantCard key={restaurant?.data?.id} {...restaurant?.data} />)}
+          {filterRestaurants?.map((restaurant) => <Link key={restaurant?.data?.id} to={"/restaurant/" + restaurant.data.id}><RestaurantCard {...restaurant?.data} /></Link>)}
         </div>
       )}
     </>
