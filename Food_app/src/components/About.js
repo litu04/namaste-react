@@ -24,10 +24,29 @@ class About extends React.Component{
         return(
             <>
                 <h2>About the Food App Page</h2>
-                <ProfileClass name={"Kumar"}/>
+                <ProfileClass name={"first child"}/>
+                <ProfileClass name={"second child"}/>
             </>
         )
     }
 }
 
 export default About
+
+/*
+render phase:
+
+    parent constructor
+    parent render
+    child 1 constructor
+    child 1 render
+    child 2 constructor
+    child 2 render
+
+commit phase:
+    update the DOM
+    child 1 compentDidMount() called
+    child 2 compentDidMount() called
+    Parent 1 compentDidMount() called
+
+*/
